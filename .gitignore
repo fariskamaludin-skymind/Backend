@@ -34,3 +34,9 @@ target/
 
 #log file
 classifai.log
+.project
+classifai-api/.project
+classifai-cloud/.project
+classifai-core/.project
+classifai-test/.project
+classifai-uberjar/.project
