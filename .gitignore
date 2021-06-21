@@ -40,3 +40,15 @@ classifai-cloud/.project
 classifai-core/.project
 classifai-test/.project
 classifai-uberjar/.project
+classifai-api/.classpath
+classifai-api/.factorypath
+classifai-cloud/.classpath
+classifai-cloud/.factorypath
+classifai-cloud/.settings/org.eclipse.jdt.apt.core.prefs
+classifai-core/.classpath
+classifai-core/.factorypath
+classifai-test/.classpath
+classifai-test/.factorypath
+classifai-uberjar/.classpath
+classifai-uberjar/.settings/org.eclipse.jdt.apt.core.prefs
+classifai-uberjar/.settings/org.eclipse.jdt.core.prefs
