@@ -19,7 +19,7 @@ jobs:
           STRING="${STRING/:lipstick: Compiled codes from https:\/\/github.com\//https:\/\/api.github.com\/repos\/}"
           STRING="${STRING/pull/pulls}"
           echo "${STRING}"
-          echo "::set-output name=pr_title::$(curl ${STRING} 2>/dev/null | jq ".title")"
+          echo "::set-output name=pr_title::$(curl ${STRING} 2>/dev/null | jq -r ".title")"
 
       - name: Echo output
         run: |
