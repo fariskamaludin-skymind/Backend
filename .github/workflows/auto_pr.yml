@@ -12,6 +12,15 @@ jobs:
       - name: Checkout Repos
         uses: actions/checkout@v2
 
+      - name: Processing string
+        id: string
+        shell: bash -l {0}
+        run: |
+          STRING=${{ github.event.head_commit.message }}
+          STRING="${STRING/:lipstick: Compiled codes from https:\/\/github.com\//https:\/\/api.github.com\/repos\/}"
+          STRING="${STRING/pull/pulls}"
+          echo "${STRING}"
+          
       - name: Create PR request
         uses: repo-sync/pull-request@v2
         with:
