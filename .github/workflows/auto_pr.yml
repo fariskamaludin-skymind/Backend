@@ -14,7 +14,6 @@ jobs:
 
       - name: Processing string
         id: string
-        shell: bash -l {0}
         run: |
           STRING="${{ github.event.head_commit.message }}"
           STRING="${STRING/:lipstick: Compiled codes from https:\/\/github.com\//https:\/\/api.github.com\/repos\/}"
