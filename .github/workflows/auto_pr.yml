@@ -16,8 +16,7 @@ jobs:
         id: string
         shell: bash -l {0}
         run: |
-          apt-get install jq
-          STRING=${{ github.event.head_commit.message }}
+          STRING="${{ github.event.head_commit.message }}"
           STRING="${STRING/:lipstick: Compiled codes from https:\/\/github.com\//https:\/\/api.github.com\/repos\/}"
           STRING="${STRING/pull/pulls}"
           echo "::set-output name=pr_title::$(curl ${STRING} | jq ".title")"
