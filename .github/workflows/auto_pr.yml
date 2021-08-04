@@ -20,7 +20,10 @@ jobs:
           STRING="${STRING/pull/pulls}"
           echo "${STRING}"
           echo "::set-output name=pr_title::$(curl ${STRING} 2>/dev/null | jq ".title")"
-          echo "${{ steps.string.outputs.pr_title }}"
+
+      - name: Echo output
+        run: |
+          echo "${{ steps.string.outputs.pr_title }}"    
           
       - name: Create PR request
         uses: repo-sync/pull-request@v2
